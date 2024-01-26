@@ -1,0 +1,215 @@
+/* Container for the image preview */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, hsl(318, 79%, 48%), #f4c94a); /* Replace with your preferred gradient or color */ 
+   
+}
+
+.interactive-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, hsl(147, 98%, 49%), #b51ad4); /* Replace with your preferred gradient or color */
+    animation: gradientAnimation 10s infinite alternate;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.img-preview {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    border-radius: 8px;
+    border: 3px solid #f8f8f8;
+    box-shadow: 0px 2px 4px 0px rgba(26, 221, 173, 0.1);
+    margin: 1em auto; /* Center the container */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    transition: border-color 0.3s ease-in-out; /* Smooth border color transition */
+}
+
+/* Styling for the image inside the container */
+.img-preview > div {
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Ensure the image covers the container */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Hidden file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Style for the upload button */
+.upload-label {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #39D2B4;
+    color: #fff;
+    font-size: 1em;
+    transition: background 0.4s, color 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.upload-label:hover {
+    background: #34495E;
+    color: #39D2B4;
+}
+
+/* Loader style for indicating image upload progress */
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto; /* Center the loader */
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Additional styling for the file input label */
+.upload-label input[type="file"] {
+    display: none;
+}
+
+/* Visual indication when file is selected */
+.upload-label input[type="file"]:focus + .img-preview {
+    border-color: #3498db;
+}
+
+/* Visual indication for a loading state */
+.uploading .upload-label {
+    background: #ddd; /* Grey background when uploading */
+    color: #666; /* Darker text color */
+    cursor: not-allowed; /* Change cursor when uploading */
+}
+
+/* Add a disabled state to the input when uploading */
+.uploading input[type="file"] {
+    pointer-events: none;
+}
+
+section.footer {
+    background-color: #21d4fd;
+   
+    position:relative;
+    font-family: "Poppins";
+    
+    padding: 25px 0px;
+    width: 100%;
+    height: 13.2%;
+    margin-top: 550px;
+    margin-bottom: 100px;
+  
+  }
+  .footer__content {
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    background-color: #21d4fd;
+    border: 1px round red;
+    
+  }
+
+  ul.social__media {
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    margin-top: -15px;
+    margin-left: 1%;
+  }
+  ul.social__media li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  ul.social__media li a {
+    color: black;
+    font-size: 20px;
+    font-display:initial;
+  }
+  ul.social__media li {
+    text-align: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    background-color: tomato;
+    line-height: 40px;
+    border: 2px solid #545d5d;
+    box-shadow: 0px 1px #fff;
+    box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.55),
+      0 0px 20px 0px rgba(0, 0, 0, 0.55);
+  }
+   
+  ul.bus__list {
+    padding: 0px;
+    margin: 30px;
+  }
+   
+  ul.bus__list li {
+    list-style-type: none;
+    margin-bottom: 5px;
+  }
+
+  
+/* Basic styles for the heading */
+/*.interactive-heading {
+text-align: center;
+font-size: 28px;
+color: #21d4fd;
+margin-top: 50px;
+cursor: pointer;
+transition: transform 0.3s ease;*/
+
+.footer__content img {
+          width: 5%;
+          position: absolute;
+          top: -50px;
+          border: 1px round red;
+        }
+        .footer__heading {
+          position: relative;
+        }
+        .footer__heading h2 {
+          background-color: #21d4fd;
+          display: inline-block;
+          padding: 0px 10px;
+          border: 1px solid;
+          position: relative;
+          z-index: 9999;
+        }  
+
+         .footer__heading::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 45%;
+          height: 5px;
+          margin: 0;
+          border-radius: 50px;
+          width: 20%;
+          transform: translate(-50%, -50%);
+          background-color: rgb(255, 255, 255);
+        }
+        .footer__content p {
+          font-size: 15px;
+          font-weight: 100;
+          padding: 15px 0px;
+        } 
