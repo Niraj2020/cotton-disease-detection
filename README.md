@@ -71,8 +71,12 @@ we used ImageDataGenerator Module of the Keras Image Preprocessing Library.This 
                        "aws:elasticbeanstalk:container:python":
                          WSGIPath:application.py:application 
 
+## How to run ? 
+1. Clone/Download the project from github
+2. Follow above "Trained prediction model link" step
+3. create new conda/python environment, activate the environment created and install application dependencies via terminal command in root directory of the application by "pip install -r requirments.txt", update the depenencied based on Environment.
+4. Run application.py file.
 
-                         
 
 
 
