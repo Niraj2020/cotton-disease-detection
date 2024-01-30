@@ -1,3 +1,3 @@
 # cotton-disease-detection
 # using kaggle
-#niraj sharma
+# niraj sharma
